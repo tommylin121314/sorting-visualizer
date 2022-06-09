@@ -2,33 +2,25 @@ body {
     margin: 0px;
     background-color: #111111;
     font-family: 'Chakra Petch', sans-serif;
-}
-
-.heading {
     color: #EEEEEE;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 8vh;
 }
 
-.content {
-    margin: auto;
-    text-align: center;
+
+.bar {
+    border: 10px #EEEEEE solid;
+    margin: 0px 10px;
 }
 
 .bars-container {
-    display: inline-block;
-    border: 1px white solid;
     padding: 2%;
-    background-color: #222222;
 }
 
-.control-panel {
-    vertical-align: top;
-    display: inline-block;
-    width: 30vw;
-    margin-left: 1vw;
-    padding: 2%;
+.button {
+    padding: 20px;
+    margin: 10px;
+    width: 20%;
+    background-color: #111111;
+    color: #EEEEEE;
 }
 
 .buttons {
@@ -36,141 +28,126 @@ body {
     height: 25vh;
 }
 
+.content {
+    margin: auto;
+    text-align: center;
+}
+
+.control-panel {
+    vertical-align: top;
+    width: 30vw;
+    margin-left: 1vw;
+    padding: 2% 2% 1% 2%;
+}
+
+.heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 8vh;
+}
+
 .sort-option {
-    color: #EEEEEE;
-    background-color: #222222;
-    border: 1px white solid;
-    padding: 20px;
-    margin: 10px;
-    display: block;
     width: 25%;
-    display: inline-block;
 }
 
-.button {
-    color: #EEEEEE;
-    background-color: #222222;
+
+
+
+/* CSS Groupings */
+
+.bars-container, .control-panel {
+    background-color:#222222;
+}
+
+.sort-option, .button, .bars-container, .control-panel {
     border: 1px white solid;
-    padding: 20px;
-    margin: 10px;
-    display: block;
-    width: 20%;
+}
+
+.bars-container, .control-panel, .bar, .button {
     display: inline-block;
 }
 
-.user-input {
-    height: 50vh;
-    width: 50vh;
-    background-color: #222222;
-    border: 1px white solid;
-    color: white;
-    font-family: 'Chakra Petch', sans-serif;
-}
 
-.bar {
-    border-left: 10px solid;
-    border-right: 10px solid;
-    display: inline-block;
-    margin: 0px 10px;
-    color: #EEEEEE;
-}
+
+
+/* Bar Heights */
 
 .height01 {
     height: 10vh;
-    /* color: #62ffeb; */
 }
 
 .height02 {
     height: 12vh;
-    /* color: #51faec; */
 }
 
 .height03 {
     height: 14vh;
-    /* color: #3df4ee; */
 }
 
 .height04 {
     height: 16vh;
-    /* color: #23efef; */
 }
 
 .height05 {
     height: 18vh;
-    /* color: #00e9f0; */
 }
 
 .height06 {
     height: 20vh;
-    /* color: #00e3f1; */
 }
 
 .height07 {
     height: 22vh;
-    /* color: #00def2; */
 }
 
 .height08 {
     height: 24vh;
-    /* color: #00d8f3; */
 }
 
 .height09 {
     height: 26vh;
-    /* color: #00d2f3; */
 }
 
 .height10 {
     height: 28vh;
-    /* color: #00ccf3; */
 }
 
 .height11 {
     height: 30vh;
-    /* color: #00c6f3; */
 }
 
 .height12 {
     height: 32vh;
-    /* color: #00c0f2; */
 }
 
 .height13 {
     height: 34vh;
-    /* color: #00baf1; */
 }
 
 .height14 {
     height: 36vh;
-    /* color: #00b3ef; */
 }
 
 .height15 {
     height: 38vh;
-    /* color: #00aded; */
 }
 
 .height16 {
     height: 40vh;
-    /* color: #00a6ec; */
 }
 
 .height17 {
     height: 42vh;
-    /* color: #009deb; */
 }
 
 .height18 {
     height: 44vh;
-    /* color: #0096ea; */
 }
 
 .height19 {
     height: 46vh;
-    /* color: #008de9; */
 }
 
 .height20 {
     height: 48vh;
-    /* color: #0086e8; */
 }
