@@ -34,7 +34,7 @@ body {
 }
 
 .control-panel {
-    vertical-align: top;
+    vertical-align: bottom;
     width: 30vw;
     margin-left: 1vw;
     padding: 2% 2% 1% 2%;
@@ -51,6 +51,20 @@ body {
 }
 
 
+
+/* Responsiveness */
+.hover {
+    background-color: #555555;
+}
+
+.active {
+    background-color: #EEEEEE;
+    color: #111111
+}
+
+.disabled {
+    color:#333333;
+}
 
 
 /* CSS Groupings */
