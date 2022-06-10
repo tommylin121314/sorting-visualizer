@@ -66,6 +66,9 @@ body {
     color:#333333;
 }
 
+.highlightedBar {
+    border-color: #AAAAAA ;
+}
 
 /* CSS Groupings */
 
