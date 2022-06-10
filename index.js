@@ -1,5 +1,8 @@
 var bars = $('.bar')
 var sortOption = 'Bubble Sort';
+var isPlaying = false;
+var timeouts = [100, 250, 500, 750, 1000];
+var timeoutIndex = 2;
 
 
 function isSorted(bars) {
@@ -38,22 +41,34 @@ async function toggleHighlight(bar) {
     bar.classList.toggle('highlightedBar');
 }
 
+function toggleDisable(button) {
+    console.log("Toggle");
+    if(button.getAttribute('disabled')) {
+        button.removeAttribute('disabled');
+    }
+    else {
+        button.setAttribute('disabled', 'disabled');
+    }
+    button.classList.toggle('disabled');
+    button.classList.remove('hover');
+}
+
 async function swapClasses(x, y) {
     var height1 = parseInt(x.className.slice(10));
     var height2 = parseInt(y.className.slice(10));
     if(height1 > height2) {
-        await pause(100);
+        await pause();
         var temp = x.className;
         x.className = y.className;
         y.className = temp;
     }
 }
 
-async function pause(timeout) {
+async function pause() {
     return new Promise(resolve => {
         setTimeout(() => {
             resolve();
-        }, timeout);
+        }, timeouts[timeoutIndex]);
     });
 }
 
@@ -108,17 +123,41 @@ $('.sort-option').click(
 );
 
 $('.fa-play').click(
-    function() {
+    async function() {
         switch(sortOption) {
             case 'Bubble Sort':
-                bubbleSort();
+                isPlaying = true;
+                toggleDisable(this);
+                for(var i = 0; i < $('.sort-option').length; i++) {
+                    toggleDisable($('.sort-option')[i]);
+                }
+                await bubbleSort();
+                toggleDisable(this);
+                for(var i = 0; i < $('.sort-option').length; i++) {
+                    toggleDisable($('.sort-option')[i]);
+                }
                 break;
             case 'Insertion Sort':
-                insertionSort();
+                toggleDisable(this);
+                await insertionSort();
+                toggleDisable(this);
                 break;
             case 'Bogo Sort':
-                bogoSort();
+                toggleDisable(this);
+                await bogoSort();
+                toggleDisable(this);
                 break;
+        }
+    }
+)
+
+$('.fa-backward').click(
+    function() {
+        if(timeoutIndex < timeouts.length - 1) {
+            timeoutIndex++;
+        }
+        if(timeoutIndex == timeouts.length - 1) {
+            toggleDisable(this);
         }
     }
 )
